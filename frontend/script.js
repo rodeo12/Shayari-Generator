@@ -32,7 +32,7 @@ generateButton.addEventListener('click', async () => {
 
     // Display generated Shayari
     shayariContainer.textContent = shayari;
-    // showConfetti();
+    
 
     // Remove loading indicator (optional)
   } catch (error) {
@@ -46,27 +46,6 @@ generateButton.addEventListener('click', async () => {
   }
 });
 
-function showConfetti() {
-  const confettiContainer = document.getElementById("confetti-container");
-  confettiContainer.style.opacity = 1; // Make confetti visible
-
-  const particleCount = 100; // Adjust number of particles
-  const colors = ["#f00", "#0f0", "#00f"]; // Adjust colors
-
-  const range = { x: window.innerWidth, y: window.innerHeight }; // Entire viewport
-
-  confetti.create(confettiContainer, {
-    resize: true, // Adjust for window resizing
-    particleCount,
-    colors,
-    angle: { min: 60, max: 80 }, // Adjust confetti angle
-    spread: 360, // Adjust confetti spread
-    shapes: confetti.shapes.circle, // Choose shape (circle, square, etc.)
-    scale: { min: 0.1, max: 0.5 }, // Adjust confetti size
-    duration: 3000, // Adjust animation duration
-    drift: 4, // Adjust horizontal drift
-  });
-}
 
 
 
