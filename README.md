@@ -1,5 +1,5 @@
 # Shayari-Generator App
-![alt text] (https://github.com/rodeo12/Shayari-Generator/blob/main/frontend/images/shayari.png?raw=true)
+https://github.com/rodeo12/Shayari-Generator/blob/main/frontend/images/shayari.png?raw=true
 
 # Introduction
     This Shayari Generator App allows users to enter a keyword and receive a creatively generated Shayari poem based on that keyword. It utilizes Gemini API (from Google AI) model for creative text generation.
