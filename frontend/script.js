@@ -13,6 +13,7 @@ generateButton.addEventListener('click', async () => {
   }
 
   // Show loading indicator (optional)
+  shayariContainer.style.border = '2px dashed black';
   shayariContainer.textContent = 'Loading...';
 
   try {
@@ -30,7 +31,27 @@ generateButton.addEventListener('click', async () => {
     const data = await response.json();
     const shayari = data.shayari;
 
+    shayariContainer.addEventListener('mouseover', () => {
+      shayariContainer.style.backgroundColor = '#f5f5f5'; // Light background on hover
+      shayariContainer.style.cursor = 'pointer'; // Change cursor to pointer
+       // Add the transformation styles
+  shayariContainer.style.transform = 'scale(1.5)';
+  shayariContainer.style.msTransform = '-ms-transform: scale(1.5)'; // For IE 9
+  shayariContainer.style.webkitTransform = '-webkit-transform: scale(1.5)'; // For Safari 3-8
+    });
+  
+    shayariContainer.addEventListener('mouseout', () => {
+      shayariContainer.style.backgroundColor = 'inherit'; // Reset background color
+      shayariContainer.style.cursor = 'default'; // Reset cursor
+
+      shayariContainer.style.transform = "none";
+  shayariContainer.style.msTransform = "none"; // For IE 9
+  shayariContainer.style.webkitTransform = "none"; // For Safari 3-8
+
+    });
+
     // Display generated Shayari
+    
     shayariContainer.textContent = shayari;
     
 
