@@ -10,8 +10,8 @@
 
 # Deployed App
 
-    * Frontend:  [Link to your deployed frontend]
-    * Backend:  [Link to your deployed backend]
+    * Frontend:  https://663954938807c05184abd9e0--cheery-churros-50e0aa.netlify.app/
+    
 
 # Directory Structure
 
@@ -68,7 +68,7 @@ The generated Shayari will be displayed below the button.
 
 # Source for Reference
     https://ai.google.dev/gemini-api/docs
-    
+
 # Technology Stack
 
     Frontend: HTML, CSS, JavaScript
