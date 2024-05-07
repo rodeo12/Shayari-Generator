@@ -54,7 +54,7 @@ const API_KEY = process.env.API_KEY;
         const shayari = response.text() || 'Could not generate Shayari at this time.';
 // console.log(shayari)
         return shayari;
-    } catch (error) {x
+    } catch (error) {
       if ( error.message.includes('SAFETY')) {
         console.log('Shayari generation failed due to safety concerns,try with a different keyword:', error);
         return 'Shayari generation failed due to safety concern. Please try a different keyword.';
