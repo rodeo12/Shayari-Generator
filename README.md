@@ -1,4 +1,4 @@
-# Shayari-Generator App
+# Content-Generator App
 ![content](https://github.com/rodeo12/Shayari-Generator/assets/112781993/a7c4f372-c3a2-4306-bf07-12ef3799b798)
 
 # Introduction
