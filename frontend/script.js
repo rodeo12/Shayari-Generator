@@ -1,7 +1,9 @@
+//Shayari generation//
+
 const keywordInput = document.getElementById('keyword');
 const generateButton = document.getElementById('generate-button');
 const shayariContainer = document.getElementById('shayari-container');
-// import confetti from 'canvas-confetti-js';
+
 
 generateButton.addEventListener('click', async () => {
   const keyword = keywordInput.value.trim();

@@ -41,7 +41,7 @@ h1 {
 
 #generate-button {
   padding: 1rem 2rem;
-  background-color: #007bff;
+  background-color: #333333;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -58,7 +58,7 @@ h1 {
 /* Shayari Container */
 #shayari-container {
   padding: 1rem;
-   /* Removed default border */
+  /* Removed default border */
   border-radius: 5px;
   font-size: 1.5rem;
   text-align: center;
@@ -68,8 +68,23 @@ h1 {
   transition: all 0.2s ease-in-out;
 }
 
+/* Styles for the new buttons */
+#generate-joke, #generate-quote, #generate-story {
+  padding: 1rem 2rem;
+  background-color: #333; /* Darker background for contrast */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-right: 1rem; /* Add some spacing between buttons */
+}
 
-
+#generate-joke:hover, #generate-quote:hover, #generate-story:hover {
+  background-color: #0067cc; /* Darker shade on hover */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 
 /* Optional: Add a subtle shadow effect */
 #form-container, #shayari-container {

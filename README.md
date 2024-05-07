@@ -1,8 +1,8 @@
 # Shayari-Generator App
-![shayari](https://github.com/rodeo12/Shayari-Generator/assets/112781993/5d1f6fc0-2015-4bfe-acd1-39bba5c17261)
+![content](https://github.com/rodeo12/Shayari-Generator/assets/112781993/a7c4f372-c3a2-4306-bf07-12ef3799b798)
 
 # Introduction
-    This Shayari Generator App allows users to enter a keyword and receive a creatively generated Shayari poem based on that keyword. It utilizes Gemini API (from Google AI) model for creative text generation.
+    This Content Generator App allows users to enter a keyword and receive a creatively generated Shayari poem,joke,quote, story based on that keyword. It utilizes Gemini API (from Google AI) model for creative text generation.
 
 # Project Type
 
@@ -10,7 +10,8 @@
 
 # Deployed App
 
-    * Frontend:  https://663954938807c05184abd9e0--cheery-churros-50e0aa.netlify.app/
+    * Frontend:  https://contentgenerator12.netlify.app/
+    * Backend:   https://shayarigeminibackend.onrender.com
     
 
 # Directory Structure
@@ -30,29 +31,27 @@ shayari-generator/
 # Features
 
     Generates a Shayari poem based on the entered keyword by the user, using OpenAI's API.
-    Displays the generated Shayari on the frontend.
+    Generates a Joke based on the entered keyword by the user, using OpenAI's API.
+    Generates a Quote based on the entered keyword by the user, using OpenAI's API.
+    Generates a Story based on the entered keyword by the user, using OpenAI's API.
+    
     
 # Design Decisions & Assumptions
 
-    Used OpenAI's text-davinci-003 model for creative text generation due to its ability to generate different creative text formats.
-    Assumed users have a basic understanding of what Shayari is.
+    Used Gemini Api for creative text generation due to its ability to generate different creative text formats.
+    Assumed users have a basic understanding of what content generation is.
     Installation & Getting Started
 
 # Clone this repository:
 
     Git Bash
-    Use code with caution.
-    git clone https://github.com/rodeo12/Shayari-Generator
     Use code with caution & do not copy the code.
-    Install dependencies:
-
-    Bash
+    git clone https://github.com/rodeo12/Shayari-Generator
+    
     cd shayari-generator
     cd backend
-    npm install express dotenv @google/generative-ai cors
-
-
-
+    Install dependencies: npm install express dotenv @google/generative-ai cors
+    
     Create a .env file in the project root directory and add your OpenAI API key:
     API_KEY=your_openai_api_key
     Run the server: npm start
