@@ -2,10 +2,7 @@ const express = require('express');
 require("dotenv").config();
 const cors= require("cors");
 
-
 const { GoogleGenerativeAI } = require("@google/generative-ai"); // Assuming this library exists
-
-
 
 const app = express();
 app.use(express.json());
@@ -14,6 +11,9 @@ const port = process.env.PORT || 3000; // Use environment variable for port or d
 const API_KEY = process.env.API_KEY;
 
 
+app.get("/",(req,res)=>{
+  res.send("Welcome to Shayari Generator Backend")
+})
 
 // const { GoogleGenerativeAI } = require("@google/generative-ai");
 
@@ -37,8 +37,6 @@ const API_KEY = process.env.API_KEY;
   // Function to generate Shayari
   async function generateShayari(keyword, genAI) {
     try {
-      
-      
 
         // Get the Gemini Pro model
         const model = genAI.getGenerativeModel({ model: "gemini-pro"});
@@ -60,9 +58,7 @@ const API_KEY = process.env.API_KEY;
         return 'Shayari generation failed due to safety concern. Please try a different keyword.';
       }else{
         console.error('Error generating Shayari:', error);
-      }
-        
-       
+      }          
     }
 }
 
@@ -76,20 +72,12 @@ app.post('/generate-shayari', async (req, res) => {
             
           }
           const genAI = new GoogleGenerativeAI(API_KEY);
-        const keyword = req.body.keyword;
-        
-
-        // Validate keyword (optional)
+          const keyword = req.body.keyword;
 
         // Check if API key is set in environment variable
         if (!API_KEY) {
             return res.status(401).json({ message: 'Missing GEMINI_API_KEY environment variable' });
         }
-
-        // Create GoogleGenerativeAI instance with API key
-       
-
-      
 
         // Generate Shayari and send response
         const shayari = await generateShayari(keyword, genAI);

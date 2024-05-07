@@ -13,12 +13,13 @@ generateButton.addEventListener('click', async () => {
   }
 
   // Show loading indicator (optional)
-  shayariContainer.style.border = '2px dashed black';
+  
   shayariContainer.textContent = 'Loading...';
+ 
 
   try {
     // Fetch Shayari from backend API (replace with actual URL)
-    const response = await fetch('http://localhost:3000/generate-shayari', {
+    const response = await fetch('https://shayarigeminibackend.onrender.com/generate-shayari', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ keyword }),
@@ -30,6 +31,7 @@ generateButton.addEventListener('click', async () => {
 
     const data = await response.json();
     const shayari = data.shayari;
+    shayariContainer.style.border = '2px dashed black';
 
     shayariContainer.addEventListener('mouseover', () => {
       shayariContainer.style.backgroundColor = '#f5f5f5'; // Light background on hover
